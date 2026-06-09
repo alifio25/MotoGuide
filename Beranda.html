@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MotoGuide - Beranda</title>
+    <!-- Tailwind CSS v3 with plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts for professional typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style data-purpose="global-styles">
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+    </style>
+  </head>
+  <body class="text-slate-800">
+    <!-- BEGIN: MainHeader -->
+    <header
+      class="bg-[#0056b3] text-white py-3 shadow-md"
+      data-purpose="navigation-bar"
+    >
+      <div class="container mx-auto px-6 flex items-center gap-3">
+        <!-- Motorcycle Logo Icon -->
+
+        <h1 class="text-xl font-bold tracking-tight">MotoGuide</h1>
+      </div>
+    </header>
+    <!-- END: MainHeader -->
+    <!-- BEGIN: HeroSection -->
+    <main class="container mx-auto px-6 py-12">
+      <section
+        class="bg-blue-50 rounded-3xl overflow-hidden shadow-sm flex flex-col md:flex-row items-center relative"
+        data-purpose="hero-banner"
+      >
+        <!-- Text Content Container -->
+        <div class="w-full md:w-1/2 p-10 md:pl-16 z-10">
+          <h2
+            class="text-4xl md:text-5xl font-extrabold text-[#1e293b] leading-tight mb-6"
+          >
+            Temukan Sepeda Motor yang Paling Sesuai dengan
+            <span class="text-[#0056b3]">Kebutuhan Anda</span>
+          </h2>
+          <p class="text-slate-600 text-lg mb-10 max-w-lg leading-relaxed">
+            Sistem rekomendasi cerdas menggunakan metode
+            <strong>Weighted Content-Based Filtering</strong> untuk memberikan
+            rekomendasi motor terbaik beserta alasannya.
+          </p>
+          <button
+            class="bg-[#0056b3] hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition duration-300 flex items-center gap-3"
+          >
+            <!-- Search Icon -->
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+            Mulai Rekomendasi
+          </button>
+        </div>
+        <!-- Image Container with Background Graphic -->
+        <div
+          class="w-full md:w-1/2 relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden"
+        >
+          <!-- Light blue circle decoration -->
+          <div
+            class="absolute w-[80%] aspect-square bg-[#e2f0ff] rounded-full -right-10 md:right-10"
+          ></div>
+          <!-- Dot Pattern Placeholder Decoration -->
+          <div
+            class="absolute right-10 top-20 opacity-30 grid grid-cols-4 gap-2"
+          >
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+          </div>
+          <!-- Motor Image -->
+          <img
+            alt="White Scooter"
+            class="relative z-10 w-4/5 object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx8aRFEjVwMg269qe0lzSpKeZbTjnKK0thjIbVHh5jb5J1QMOvoROJmd10zoDGY3HpkGyQSp-FsQIJpo02V_lgR2er_8nPluYrx1fN4x6gCPTHXzec3GQa3j3aacKkH8wWL8LKf7Dy2vOu5ZvgwRSdRHRT-4ssvDKDPAwIApb6v88345drUocL7BStSMTAVKGZPIA5mFUrqOhz0bo0mcK20APOMlwIpTpnjIuIsDE9IFb04OGYalk4m87uaZ_LLSv-n4n7gbEH1jLQ"
+          />
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- BEGIN: FeaturesSection -->
+      <section class="mt-16" data-purpose="features-grid">
+        <h3 class="text-xl font-bold text-[#1e293b] mb-8">
+          Mengapa Menggunakan Sistem Ini?
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1: Sesuai Kebutuhan -->
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+            data-purpose="feature-card"
+          >
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-4 border border-blue-100"
+            >
+              <svg
+                class="w-7 h-7 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-[#1e293b] mb-2">Sesuai Kebutuhan</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Rekomendasi disesuaikan dengan preferensi dan kebutuhan Anda.
+            </p>
+          </div>
+          <!-- Card 2: Penjelasan Jelas -->
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+            data-purpose="feature-card"
+          >
+            <div
+              class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mb-4 border border-green-100"
+            >
+              <svg
+                class="w-7 h-7 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-[#1e293b] mb-2">Penjelasan Jelas</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Setiap rekomendasi dilengkapi dengan alasan yang mudah dipahami.
+            </p>
+          </div>
+          <!-- Card 3: Cepat & Akurat -->
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+            data-purpose="feature-card"
+          >
+            <div
+              class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-4 border border-orange-100"
+            >
+              <svg
+                class="w-7 h-7 text-orange-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-[#1e293b] mb-2">Cepat &amp; Akurat</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Proses perhitungan cepat dengan hasil rekomendasi yang akurat.
+            </p>
+          </div>
+          <!-- Card 4: Mudah Digunakan -->
+          <div
+            class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow"
+            data-purpose="feature-card"
+          >
+            <div
+              class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center mb-4 border border-purple-100"
+            >
+              <svg
+                class="w-7 h-7 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-[#1e293b] mb-2">Mudah Digunakan</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">
+              Antarmuka sederhana dan nyaman digunakan oleh semua pengguna.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- END: FeaturesSection -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer
+      class="mt-12 py-10 border-t border-slate-200 bg-white"
+      data-purpose="main-footer"
+    >
+      <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+        <p class="">© 2024 MotoGuide. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+  </body>
+</html>
