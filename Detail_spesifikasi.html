@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Detail Spesifikasi Motor - Honda Vario 160 CBS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style data-purpose="typography">
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+    <style data-purpose="custom-layout">
+      .bg-gradient-header {
+        background: linear-gradient(to right, #0046ad, #0056d2);
+      }
+      .spec-table-row:nth-child(odd) {
+        background-color: #f8fafc;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <!-- BEGIN: TopNavigationBar -->
+    <nav
+      class="bg-gradient-header text-white px-6 py-4 flex items-center shadow-md"
+      data-purpose="main-navigation"
+    >
+      <div class="flex items-center gap-2">
+        <!-- Icon Placeholder for Motorcycle -->
+
+        <span class="font-semibold text-lg">Rekomendasi Sepeda Motor</span>
+      </div>
+    </nav>
+    <!-- END: TopNavigationBar -->
+    <!-- BEGIN: MainContent -->
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+      <!-- BEGIN: DetailCard -->
+      <div
+        class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden p-6 md:p-8"
+        data-purpose="specification-card"
+      >
+        <!-- BEGIN: HeaderSection -->
+        <div class="flex items-start gap-4 mb-6">
+          <div class="bg-blue-600 p-2 rounded-lg text-white">
+            <!-- Icon List -->
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">
+              Detail Spesifikasi Motor
+            </h1>
+            <p class="text-gray-500 text-sm mt-1">
+              Informasi spesifikasi lengkap motor berdasarkan data yang
+              tersedia.
+            </p>
+          </div>
+        </div>
+        <!-- END: HeaderSection -->
+        <!-- BEGIN: HighlightSection -->
+        <div
+          class="bg-blue-50/50 rounded-xl p-6 mb-8 border border-blue-100"
+          data-purpose="motor-title-highlight"
+        >
+          <h2 class="text-2xl font-extrabold text-blue-800 mb-3">
+            Honda Vario 160 CBS
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold"
+            >
+              Peringkat #1
+            </span>
+            <span
+              class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold"
+            >
+              Skor Kecocokan 92%
+            </span>
+          </div>
+        </div>
+        <!-- END: HighlightSection -->
+        <!-- BEGIN: SpecificationGrid -->
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-4">
+            <svg
+              class="h-5 w-5 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+            <h3 class="font-bold text-gray-800">Spesifikasi Motor</h3>
+          </div>
+          <hr class="border-gray-200 mb-6" />
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <!-- Left Column -->
+            <div class="space-y-1">
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Nama Motor</span>
+                <span class="text-gray-800 text-sm font-medium"
+                  >Honda Vario 160 CBS</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Merek</span>
+                <span class="text-gray-800 text-sm font-medium">Honda</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Jenis Motor</span>
+                <span class="text-gray-800 text-sm font-medium">Matic</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Harga</span>
+                <span class="text-gray-800 text-sm font-medium"
+                  >Rp 29.500.000</span
+                >
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Kapasitas Mesin</span>
+                <span class="text-gray-800 text-sm font-medium">160 CC</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Konsumsi BBM</span>
+                <span class="text-gray-800 text-sm font-medium">46 km/l</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Kapasitas Bagasi</span>
+                <span class="text-gray-800 text-sm font-medium">18 Liter</span>
+              </div>
+            </div>
+            <!-- Right Column -->
+            <div class="space-y-1 mt-1 md:mt-0">
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Tinggi Jok</span>
+                <span class="text-gray-800 text-sm font-medium">778 mm</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Berat Motor</span>
+                <span class="text-gray-800 text-sm font-medium">117 kg</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Kapasitas Tangki</span>
+                <span class="text-gray-800 text-sm font-medium">5,5 Liter</span>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Cocok untuk Harian</span>
+                <div class="flex items-center gap-1 text-green-600">
+                  <svg
+                    class="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-sm font-medium">Ya</span>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Cocok untuk Touring</span>
+                <div class="flex items-center gap-1 text-green-600">
+                  <svg
+                    class="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-sm font-medium">Ya</span>
+                </div>
+              </div>
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-gray-600 text-sm">Cocok untuk Performa</span>
+                <div class="flex items-center gap-1 text-green-600">
+                  <svg
+                    class="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="text-sm font-medium">Ya</span>
+                </div>
+              </div>
+              <!-- Empty Row for alignment balance -->
+              <div
+                class="flex justify-between items-center p-3 spec-table-row rounded"
+              >
+                <span class="text-transparent text-sm">.</span>
+                <span class="text-transparent text-sm">.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: SpecificationGrid -->
+      </div>
+      <!-- END: DetailCard -->
+      <!-- BEGIN: FooterAction -->
+      <div class="mt-8 flex justify-center">
+        <button
+          class="flex items-center gap-2 px-6 py-2.5 bg-white border border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors shadow-sm"
+          data-purpose="back-button"
+        >
+          <svg
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            ></path>
+          </svg>
+          Kembali ke Rekomendasi
+        </button>
+      </div>
+      <!-- END: FooterAction -->
+    </main>
+    <!-- END: MainContent -->
+  </body>
+</html>

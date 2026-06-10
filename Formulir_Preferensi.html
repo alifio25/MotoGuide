@@ -1,618 +1,582 @@
 <!doctype html>
-<html class="light" lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>MotoGuide - Formulir Preferensi</title>
+    <title>Rekomendasi Sepeda Motor - Profil Pengguna</title>
+    <!-- Tailwind CSS v3 CDN with plugins -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-            "on-tertiary-fixed-variant": "#005235",
-            surface: "#f8f9fb",
-            "secondary-fixed": "#dce3f0",
-            "on-primary": "#ffffff",
-            "on-error-container": "#93000a",
-            outline: "#737685",
-            error: "#ba1a1a",
-            "surface-dim": "#d9dadc",
-            primary: "#003d9b",
-            "on-background": "#191c1e",
-            "surface-container-high": "#e7e8ea",
-            tertiary: "#004e32",
-            "surface-bright": "#f8f9fb",
-            "on-tertiary": "#ffffff",
-            "primary-fixed": "#dae2ff",
-            "outline-variant": "#c3c6d6",
-            "primary-container": "#0052cc",
-            "on-primary-container": "#c4d2ff",
-            "on-primary-fixed": "#001848",
-            "on-error": "#ffffff",
-            "tertiary-fixed": "#82f9be",
-            "error-container": "#ffdad6",
-            "on-tertiary-fixed": "#002113",
-            "surface-variant": "#e1e2e4",
-            "on-secondary": "#ffffff",
-            "on-surface-variant": "#434654",
-            "on-secondary-container": "#5c636f",
-            "inverse-on-surface": "#f0f1f3",
-            secondary: "#585f6a",
-            "tertiary-fixed-dim": "#65dca4",
-            "inverse-surface": "#2e3132",
-            "on-secondary-fixed": "#151c26",
-            "surface-container-low": "#f3f4f6",
-            "surface-tint": "#0c56d0",
-            "on-secondary-fixed-variant": "#414752",
-            "surface-container": "#edeef0",
-            "tertiary-container": "#006844",
-            "secondary-container": "#dae0ee",
-            "on-tertiary-container": "#72e9af",
-            "primary-fixed-dim": "#b2c5ff",
-            background: "#f8f9fb",
-            "surface-container-highest": "#e1e2e4",
-            "on-primary-fixed-variant": "#0040a2",
-            "secondary-fixed-dim": "#c0c7d4",
-            "on-surface": "#191c1e",
-            "surface-container-lowest": "#ffffff",
-            "inverse-primary": "#b2c5ff",
-            },
-            borderRadius: {
-            DEFAULT: "0.125rem",
-            lg: "0.25rem",
-            xl: "0.5rem",
-            full: "0.75rem",
-            },
-            spacing: {
-            "margin-mobile": "16px",
-            "stack-lg": "32px",
-            "stack-sm": "8px",
-            gutter: "24px",
-            "stack-md": "16px",
-            "container-max": "1200px",
-            },
-            fontFamily: {
-            "display-lg-mobile": ["Inter"],
-            "headline-md": ["Inter"],
-            "display-lg": ["Inter"],
-            "body-lg": ["Inter"],
-            "label-md": ["Inter"],
-            "body-md": ["Inter"],
-            "headline-sm": ["Inter"],
-            },
-            fontSize: {
-            "display-lg-mobile": [
-                "28px",
-                { lineHeight: "34px", fontWeight: "700" },
-            ],
-            "headline-md": [
-                "24px",
-                { lineHeight: "32px", fontWeight: "600" },
-            ],
-            "display-lg": [
-                "36px",
-                {
-                lineHeight: "44px",
-                letterSpacing: "-0.02em",
-                fontWeight: "700",
-                },
-            ],
-            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-            "label-md": ["12px", { lineHeight: "16px", fontWeight: "500" }],
-            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
-            "headline-sm": [
-                "18px",
-                { lineHeight: "24px", fontWeight: "600" },
-            ],
-            },
-        },
-        },
-    };
-    </script>
-    <style>
-    .material-symbols-outlined {
-        font-variation-settings:
-        "FILL" 0,
-        "wght" 400,
-        "GRAD" 0,
-        "opsz" 24;
-        vertical-align: middle;
-    }
-    body {
-        font-family: "Inter", sans-serif;
-    }
-    .form-shadow {
-        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    }
+    <style data-purpose="custom-styling">
+      body {
+        background-color: #f8fafc;
+      }
+      .custom-shadow {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
     </style>
-</head>
-<body class="bg-background text-on-surface">
-    <!-- TopNavBar -->
-    <nav
-    class="w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50 bg-primary"
-    >
-    <div
-        class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-16"
-    >
-        <div class="flex items-center gap-8">
-        <span
-            class="font-headline-md text-headline-md font-bold dark:text-inverse-primary text-white"
-            >MotoGuide</span
-        >
-        </div>
-    </div>
-    </nav>
-    <!-- Main Content -->
-    <main class="max-w-container-max mx-auto px-gutter py-stack-lg">
-    <header class="mb-stack-lg">
-        <h1 class="font-display-lg text-display-lg text-on-surface">
-          Profil Pengguna
-        </h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+  </head>
+  <body class="font-sans text-slate-700">
+    <!-- BEGIN: MainHeader -->
+    <header class="bg-blue-700 text-white p-4 shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex items-center gap-3">
+        <!-- Motor Icon Placeholder -->
+
+        <h1 class="text-lg font-bold">Rekomendasi Sepeda Motor</h1>
+      </div>
+    </header>
+    <!-- END: MainHeader -->
+    <!-- BEGIN: MainContent -->
+    <main class="max-w-6xl mx-auto p-6 md:p-10">
+      <!-- Title Section -->
+      <div class="mb-8" data-purpose="page-title">
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Profil Pengguna</h2>
+        <p class="text-slate-500">
           Silakan isi
-          <a class="text-primary underline" href="#">preferensi Anda</a> untuk
-          mendapatkan rekomendasi sepeda motor yang paling sesuai.
+          <span class="text-blue-600 underline cursor-pointer"
+            >preferensi Anda</span
+          >
+          untuk mendapatkan rekomendasi sepeda motor yang paling sesuai.
         </p>
-      </header>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Form Canvas -->
-        <div
-          class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-xl p-8 form-shadow"
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- BEGIN: PreferenceForm -->
+        <section
+          class="lg:col-span-8 bg-white p-6 md:p-8 rounded-xl custom-shadow border border-slate-100"
+          data-purpose="form-container"
         >
-          <h2 class="font-headline-sm text-headline-sm text-primary mb-8">
+          <h3 class="text-blue-700 font-bold text-xl mb-8">
             Form Preferensi Pengguna
-          </h2>
-          <form class="space-y-6" id="preferenceForm">
+          </h3>
+          <form action="#" class="space-y-6" method="POST">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-              <!-- Field 1 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 1: Budget Maksimal -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   1. Budget Maksimal
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
-                <div class="relative flex items-center">
+                <div class="flex">
                   <span
-                    class="absolute left-3 font-body-md text-secondary border-r pr-2 border-outline-variant"
+                    class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-slate-300 bg-slate-50 text-slate-500 text-sm font-medium"
                     >Rp</span
                   >
                   <input
-                    class="w-full pl-14 pr-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                    class="flex-1 block w-full rounded-none rounded-r-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                     type="text"
                     value="30.000.000"
                   />
                 </div>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Masukkan budget maksimal yang tersedia</span
-                >
+                <p class="text-xs text-slate-400">
+                  Masukkan budget maksimal yang tersedia
+                </p>
               </div>
-              <!-- Field 2 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 2: Jenis Motor -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   2. Jenis Motor yang Diinginkan
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none bg-surface-container-lowest transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>Matic</option>
+                  <option selected="">Matic</option>
+                  <option>Manual / Bebek</option>
                   <option>Sport</option>
-                  <option>Cub (Bebek)</option>
-                  <option>Offroad</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Pilih jenis motor yang Anda inginkan</span
-                >
+                <p class="text-xs text-slate-400">
+                  Pilih jenis motor yang Anda inginkan
+                </p>
               </div>
-              <!-- Field 3 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 3: Kapasitas Mesin -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   3. Kapasitas Mesin (CC)
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>150 - 160 CC</option>
+                  <option selected="">150 - 160 CC</option>
                   <option>110 - 125 CC</option>
-                  <option>&gt; 250 CC</option>
+                  <option>250 CC</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Pilih rentang kapasitas mesin</span
-                >
+                <p class="text-xs text-slate-400">
+                  Pilih rentang kapasitas mesin
+                </p>
               </div>
-              <!-- Field 4 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 4: Prioritas Konsumsi BBM -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   4. Prioritas Konsumsi BBM
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>Tinggi</option>
+                  <option selected="">Tinggi</option>
                   <option>Sedang</option>
                   <option>Rendah</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Seberapa penting konsumsi BBM bagi Anda</span
-                >
+                <p class="text-xs text-slate-400">
+                  Seberapa penting konsumsi BBM bagi Anda
+                </p>
               </div>
-              <!-- Field 5 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 5: Kapasitas Bagasi -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   5. Kebutuhan Kapasitas Bagasi
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>Besar ( &gt; 18 Liter )</option>
+                  <option selected="">Besar ( &gt; 18 Liter )</option>
                   <option>Sedang ( 10 - 18 Liter )</option>
                   <option>Kecil ( &lt; 10 Liter )</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Pilih kebutuhan kapasitas bagasi</span
-                >
+                <p class="text-xs text-slate-400">
+                  Pilih kebutuhan kapasitas bagasi
+                </p>
               </div>
-              <!-- Field 6 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 6: Tinggi Badan -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   6. Tinggi Badan Anda
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
-                <div class="relative flex items-center">
+                <div class="flex">
                   <input
-                    class="w-full pr-14 pl-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                    type="number"
+                    class="flex-1 block w-full rounded-none rounded-l-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                    type="text"
                     value="170"
                   />
                   <span
-                    class="absolute right-3 font-body-md text-secondary border-l pl-2 border-outline-variant"
+                    class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-slate-300 bg-slate-50 text-slate-500 text-sm"
                     >cm</span
                   >
                 </div>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Digunakan untuk menyesuaikan tinggi jok</span
-                >
+                <p class="text-xs text-slate-400">
+                  Digunakan untuk menyesuaikan tinggi jok
+                </p>
               </div>
-              <!-- Field 7 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 7: Penggunaan Harian -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   7. Penggunaan Harian
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>Ya</option>
+                  <option selected="">Ya</option>
                   <option>Tidak</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Apakah motor akan digunakan untuk kebutuhan harian?</span
-                >
+                <p class="text-xs text-slate-400">
+                  Apakah motor akan digunakan untuk kebutuhan harian?
+                </p>
               </div>
-              <!-- Field 8 -->
-              <div class="flex flex-col gap-2">
-                <label
-                  class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1"
-                >
+              <!-- Field 8: Touring -->
+              <div class="space-y-2">
+                <label class="block text-sm font-semibold text-slate-700">
                   8. Kebutuhan Touring / Perjalanan Jauh
-                  <span class="material-symbols-outlined text-[16px]"
-                    >info</span
-                  >
+                  <span class="inline-block ml-1 text-slate-400">
+                    <svg
+                      class="h-4 w-4 inline"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      ></path>
+                    </svg>
+                  </span>
                 </label>
                 <select
-                  class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
                 >
-                  <option>Ya</option>
+                  <option selected="">Ya</option>
                   <option>Tidak</option>
                 </select>
-                <span class="text-[12px] text-on-secondary-container"
-                  >Apakah Anda sering melakukan perjalanan jauh / touring?</span
-                >
+                <p class="text-xs text-slate-400">
+                  Apakah Anda sering melakukan perjalanan jauh / touring?
+                </p>
               </div>
             </div>
-            <!-- Info Alert -->
+            <!-- Info Box -->
             <div
-              class="bg-primary-container/10 border border-primary-container/20 p-4 rounded-lg flex gap-3 items-start mt-8"
+              class="bg-blue-50 border border-blue-100 rounded-lg p-4 flex gap-3 mt-8"
             >
-              <span class="material-symbols-outlined text-primary-container"
-                >info</span
+              <svg
+                class="h-6 w-6 text-blue-500 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
+                <path
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
               <div>
-                <p class="font-label-md text-label-md text-primary font-bold">
-                  Informasi
-                </p>
-                <p
-                  class="font-body-md text-body-md text-on-primary-fixed-variant"
-                >
+                <p class="text-blue-800 font-bold text-sm">Informasi</p>
+                <p class="text-blue-700 text-sm">
                   Semakin lengkap preferensi yang Anda isi, semakin akurat
                   rekomendasi yang kami berikan.
                 </p>
               </div>
             </div>
-            <!-- Action Buttons -->
-            <div
-              class="flex flex-wrap gap-4 pt-8 border-t border-outline-variant mt-8"
-            >
+            <!-- Form Buttons -->
+            <div class="flex flex-wrap gap-4 pt-4">
               <button
-                class="bg-primary hover:bg-primary-container text-on-primary flex items-center gap-2 px-8 py-3 rounded-lg font-label-md transition-all active:scale-95"
+                class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-md font-bold flex items-center gap-2 transition-colors"
                 type="submit"
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >search</span
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
                 Dapatkan Rekomendasi
               </button>
               <button
-                class="border border-outline-variant text-on-surface hover:bg-surface-container flex items-center gap-2 px-8 py-3 rounded-lg font-label-md transition-all active:scale-95"
+                class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-6 py-2.5 rounded-md font-bold flex items-center gap-2 transition-colors"
                 type="reset"
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >restart_alt</span
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  ></path>
+                </svg>
                 Reset Form
               </button>
             </div>
           </form>
-        </div>
-        <!-- Sidebar -->
-        <aside class="lg:col-span-4 space-y-6">
-          <!-- Info Section -->
+        </section>
+        <!-- END: PreferenceForm -->
+        <!-- BEGIN: Sidebar -->
+        <aside class="lg:col-span-4 space-y-6" data-purpose="sidebar">
+          <!-- Sidebar Block 1: Why data is needed -->
           <div
-            class="bg-tertiary-fixed/10 border border-tertiary-fixed/20 p-6 rounded-xl"
+            class="bg-green-50 border border-green-100 p-6 rounded-xl shadow-sm"
           >
-            <div class="flex items-center gap-2 text-tertiary mb-4">
-              <span class="material-symbols-outlined">lightbulb</span>
-              <h3 class="font-headline-sm text-headline-sm">
-                Mengapa data ini diperlukan?
-              </h3>
+            <div class="flex items-center gap-2 text-green-700 font-bold mb-4">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.663 17h4.674a1 1 0 00.922-.617l2.108-4.742A1 1 0 0016.446 10H13V4a1 1 0 00-1-1h-1a1 1 0 00-1 1v6H7.554a1 1 0 00-.922 1.641l2.108 4.742a1 1 0 00.922.617z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+              <span class="">Mengapa data ini diperlukan?</span>
             </div>
-            <p
-              class="font-body-md text-body-md text-on-tertiary-fixed-variant mb-6"
-            >
+            <p class="text-sm text-green-800 leading-relaxed mb-4">
               Data preferensi Anda akan digunakan untuk mencocokkan kebutuhan
               dengan spesifikasi motor menggunakan metode
-              <strong class="font-bold">Weighted Content-Based Filtering</strong
-              >.
+              <span class="font-bold">Weighted Content-Based Filtering</span>.
             </p>
-            <h4 class="font-label-md text-label-md text-tertiary mb-4">
+            <p class="text-sm font-bold text-green-800 mb-4">
               Kriteria yang digunakan:
-            </h4>
+            </p>
             <ul class="space-y-3">
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Budget
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Jenis Motor
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Kapasitas Mesin
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Konsumsi BBM
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Kapasitas Bagasi
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Tinggi Badan
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Penggunaan Harian
               </li>
-              <li
-                class="flex items-center gap-3 text-body-md text-on-tertiary-fixed-variant"
-              >
-                <span
-                  class="material-symbols-outlined text-tertiary text-[18px]"
-                  data-weight="fill"
-                  >check_circle</span
+              <li class="flex items-center gap-2 text-sm text-green-800">
+                <svg
+                  class="h-5 w-5 text-green-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
+                  <path
+                    clip-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
                 Kebutuhan Touring
               </li>
             </ul>
           </div>
-          <!-- Privacy Box -->
+          <!-- Sidebar Block 2: Privacy -->
           <div
-            class="bg-secondary-container/30 border border-secondary-container p-6 rounded-xl"
+            class="bg-purple-50 border border-purple-100 p-6 rounded-xl shadow-sm"
           >
-            <div class="flex items-center gap-2 text-secondary mb-3">
-              <span class="material-symbols-outlined">shield</span>
-              <h3 class="font-headline-sm text-headline-sm">
-                Privasi Terjamin
-              </h3>
+            <div class="flex items-center gap-2 text-purple-700 font-bold mb-4">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                ></path>
+              </svg>
+              <span class="">Privasi Terjamin</span>
             </div>
-            <p class="font-body-md text-body-md text-on-secondary-container">
+            <p class="text-sm text-purple-800 leading-relaxed">
               Data yang Anda masukkan hanya digunakan untuk rekomendasi dan
               tidak akan dibagikan kepada pihak lain.
             </p>
           </div>
-          <!-- Visual Accent -->
-          <div
-            class="rounded-xl overflow-hidden relative h-48 border border-outline-variant"
-          >
-            <img
-              alt="Modern Motorcycle Detail"
-              class="w-full h-full object-cover grayscale-[30%] opacity-90"
-              data-alt="A macro close-up photograph of a sleek, modern premium motorcycle engine and frame. The mechanical details are rendered with precision, showcasing clean metallic surfaces and high-quality industrial design. The lighting is sophisticated, with soft studio shadows and bright highlights that emphasize a professional, corporate modern aesthetic. The color palette consists of deep charcoals, brushed silvers, and subtle blue technical accents."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_2ResJK2Sjb3a9RpVJBX1UNhzUI7RZJxspgm_2Dh-6frHqEc5QvdHDdoHhT8NvgS3kdECRPOrCi5XGDZk38lRSEzXGhX2s_EmfkAYkedrsxrFKPLgv8buvwryg7kw_4OVpm_mJkgFufeamwha_p_6T-DjmT95AC57XHwczq-s50xBQkP3ikK_T0ahFc2L8Z_Ypf1xQVhvEBkgYDGyzrkxqLSkZkIG9YGENiupnbV4Ry9zMNi4HqMOHSLK8trcskBpJhyZ56E9AsS"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4"
-            >
-              <span class="text-white font-label-md text-label-md"
-                >Modern Precision Engineering</span
-              >
-            </div>
-          </div>
         </aside>
+        <!-- END: Sidebar -->
       </div>
     </main>
-    <!-- Footer -->
+    <!-- END: MainContent -->
+    <!-- BEGIN: Footer -->
     <footer
-      class="bg-surface-container-low dark:bg-inverse-surface w-full mt-stack-lg border-t border-outline-variant dark:border-outline"
+      class="mt-12 py-6 border-t border-slate-200 text-center text-slate-500 text-xs"
     >
-      <div
-        class="max-w-container-max mx-auto px-gutter py-stack-lg flex flex-col md:flex-row justify-between items-center gap-stack-md"
-      >
-        <div class="flex flex-col gap-2">
-          <span
-            class="font-headline-sm text-headline-sm font-bold text-primary dark:text-inverse-primary"
-            >MotoGuide</span
-          >
-          <p
-            class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim"
-          >
-            © 2024 MotoGuide Professional. All rights reserved.
-          </p>
-        </div>
-        <div class="flex flex-wrap justify-center gap-6">
-          <a
-            class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:underline hover:text-primary dark:hover:text-inverse-primary transition-all duration-200"
-            href="#"
-            >About Us</a
-          >
-          <a
-            class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:underline hover:text-primary dark:hover:text-inverse-primary transition-all duration-200"
-            href="#"
-            >Technical Specifications</a
-          >
-          <a
-            class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:underline hover:text-primary dark:hover:text-inverse-primary transition-all duration-200"
-            href="#"
-            >Privacy Policy</a
-          >
-          <a
-            class="font-body-md text-body-md text-on-secondary-container dark:text-secondary-fixed-dim hover:underline hover:text-primary dark:hover:text-inverse-primary transition-all duration-200"
-            href="#"
-            >Contact Support</a
-          >
-        </div>
+      <div class="max-w-6xl mx-auto">
+        © 2024 Recommender System Sepeda Motor. All rights reserved.
       </div>
     </footer>
-    <script>
-      // Form interactivity
-      document
-        .getElementById("preferenceForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const btn = e.target.querySelector('button[type="submit"]');
-          const originalHtml = btn.innerHTML;
-
-          btn.innerHTML =
-            '<span class="material-symbols-outlined animate-spin">refresh</span> Processing...';
-          btn.disabled = true;
-
-          setTimeout(() => {
-            alert(
-              "Menganalisis data preferensi Anda dengan sistem Weighted Content-Based Filtering...",
-            );
-            btn.innerHTML = originalHtml;
-            btn.disabled = false;
-          }, 1500);
-        });
-
-      // Simple smooth scroll for links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
+    <!-- END: Footer -->
   </body>
 </html>
