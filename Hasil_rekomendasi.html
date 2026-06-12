@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MOTO-ENGINE | Precision Recommendation Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8fafc;
+        color: #1e293b;
+        font-family: "Inter", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .bg-brand-blue {
+        background-color: #0055cc;
+      }
+      .text-brand-blue {
+        color: #0055cc;
+      }
+      .bg-brand-blue-light {
+        background-color: #eef4ff;
+      }
+      .progress-bar-bg {
+        background-color: #e2e8f0;
+      }
+      .progress-bar-fill {
+        background-color: #0055cc;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0055cc",
+              "on-primary": "#ffffff",
+              background: "#f8fafc",
+              surface: "#ffffff",
+              "on-surface": "#1e293b",
+              "on-surface-variant": "#64748b",
+              outline: "#e2e8f0",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background selection:bg-blue-100 selection:text-primary">
+    <!-- Navigation Shell (TopAppBar) -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-primary text-white shadow-md"
+    ></header>
+    <!-- Sidebar -->
+
+    <!-- Main Content Area -->
+    <main class="pt-24 pb-12 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 space-y-8">
+        <!-- Section 1: Preferensi Anda Summary -->
+        <section class="animate-in fade-in slide-in-from-top-4 duration-700">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="material-symbols-outlined text-primary"
+              >analytics</span
+            >
+            <h2 class="text-2xl font-bold text-on-surface">Preferensi Anda</h2>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Budget</span
+              >
+              <span class="text-sm font-bold text-primary">Rp 30.000.000</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Jenis Motor</span
+              >
+              <span class="text-sm font-bold text-on-surface">Matic</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Kapasitas Mesin</span
+              >
+              <span class="text-sm font-bold text-on-surface"
+                >150 - 160 CC</span
+              >
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Konsumsi BBM</span
+              >
+              <span class="text-sm font-bold text-on-surface">Tinggi</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Kapasitas Bagasi</span
+              >
+              <span class="text-sm font-bold text-on-surface">Besar</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Tinggi Badan</span
+              >
+              <span class="text-sm font-bold text-on-surface">170 cm</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Penggunaan Harian</span
+              >
+              <span class="text-sm font-bold text-on-surface">Ya</span>
+            </div>
+            <div
+              class="bg-white border border-outline p-4 rounded-xl shadow-sm"
+            >
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 block"
+                >Kebutuhan Touring</span
+              >
+              <span class="text-sm font-bold text-on-surface">Ya</span>
+            </div>
+          </div>
+        </section>
+        <!-- Section 2: Primary Recommendation Card (Image Removed, Centered Layout) -->
+        <section
+          class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100"
+        >
+          <div class="p-8 md:p-12 text-center mx-auto max-w-7xl">
+            <div
+              class="flex items-center gap-3 bg-amber-50 border border-amber-100 p-4 rounded-xl mb-6 max-w-md mx-auto animate-in fade-in slide-in-from-top-2 duration-500"
+            >
+              <span class="material-symbols-outlined text-amber-600">info</span>
+              <span class="text-sm font-medium text-amber-900"
+                >Ditemukan 5 rekomendasi terbaik</span
+              >
+            </div>
+            <div class="inline-flex items-center gap-2 mb-6">
+              <span
+                class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shadow-md"
+                >1</span
+              >
+              <span
+                class="bg-blue-50 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-blue-100"
+                >Rekomendasi Terbaik</span
+              >
+            </div>
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-2">
+              Honda Vario 160 CBS
+            </h1>
+            <p class="text-slate-500 font-medium mb-8">PREMIUM SPORT MATIC</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 mb-10">
+              <div class="text-center">
+                <p class="text-[11px] font-bold text-slate-400 uppercase mb-1">
+                  Compatibility Score
+                </p>
+                <span class="text-4xl font-black text-primary">92%</span>
+              </div>
+              <div class="h-12 w-px bg-slate-200 hidden md:block"></div>
+              <div class="text-center">
+                <p class="text-[11px] font-bold text-slate-400 uppercase mb-1">
+                  Estimated Price
+                </p>
+                <span class="text-3xl font-bold text-slate-800"
+                  >Rp 26,5 Juta</span
+                >
+              </div>
+            </div>
+            <!-- Technical Specs Grid Centered -->
+            <div
+              class="grid grid-cols-2 gap-6 py-8 border-t border-b border-slate-100 mb-10 lg:grid-cols-6"
+            >
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >engine</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Mesin
+                </p>
+                <p class="text-lg font-bold text-slate-800">160 CC</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >gas_meter</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Konsumsi BBM
+                </p>
+                <p class="text-lg font-bold text-slate-800">46 km/l</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >shopping_bag</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Bagasi
+                </p>
+                <p class="text-lg font-bold text-slate-800">18 Liter</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >height</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Tinggi Jok
+                </p>
+                <p class="text-lg font-bold text-slate-800">778 mm</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >verified</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Similarity Score
+                </p>
+                <p class="text-lg font-bold text-slate-800">0.92</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="material-symbols-outlined text-primary mb-1"
+                  >analytics</span
+                >
+                <p class="text-[10px] font-bold text-slate-400 uppercase">
+                  Tingkat Kecocokan
+                </p>
+                <p class="text-lg font-bold text-slate-800">92%</p>
+              </div>
+            </div>
+            <div class="flex justify-center mb-10 -mt-6">
+              <button
+                class="group flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-full font-bold text-sm shadow-md hover:bg-blue-700 transition-all"
+              >
+                <span class="">LIHAT DETAIL SPESIFIKASI</span>
+                <span
+                  class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+            <div class="bg-blue-50/50 rounded-2xl p-6">
+              <h3
+                class="text-sm font-bold text-primary mb-4 uppercase tracking-widest"
+              >
+                Mengapa Motor Ini Direkomendasikan?
+              </h3>
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto"
+              >
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Harga sesuai dengan budget pengguna<br
+                  /></span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Kapasitas mesin sesuai kebutuhan</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Bagasi fungsional untuk kebutuhan harian</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Konsumsi BBM efisien</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Tinggi jok sesuai dengan pengguna</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Cocok digunakan untuk touring</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Jenis motor sesuai preferensi</span
+                  >
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-green-500"
+                    >check_circle</span
+                  >
+                  <span class="text-sm text-slate-600"
+                    >Cocok penggunaan harian</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Bottom Section: Grid Layout Restyled -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          <!-- Section 3: Kontribusi Kriteria (Chart) Restyled -->
+          <section
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 animate-in fade-in slide-in-from-left-4 duration-700 delay-200 lg:col-span-8"
+          >
+            <div
+              class="flex justify-between items-center mb-8 border-b border-slate-50 pb-4"
+            >
+              <h2 class="text-xl font-bold text-slate-800">
+                Kontribusi Kriteria
+              </h2>
+              <div
+                class="flex items-center gap-2 bg-blue-50 px-3 py-1 rounded-lg"
+              >
+                <span class="text-[10px] font-bold text-primary uppercase"
+                  >TOTAL FIT</span
+                >
+                <span class="text-lg font-black text-primary">92%</span>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="space-y-2">
+                <div
+                  class="flex justify-between text-xs font-bold text-slate-500 uppercase"
+                >
+                  <span class="">BUDGET</span>
+                  <span class="text-primary">30%</span>
+                </div>
+                <div
+                  class="h-2 bg-slate-100 w-full rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-primary"
+                    style="
+                      width: 30%;
+                      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="flex justify-between text-xs font-bold text-slate-500 uppercase"
+                >
+                  <span class="">JENIS MOTOR</span>
+                  <span class="text-primary">20%</span>
+                </div>
+                <div
+                  class="h-2 bg-slate-100 w-full rounded-full overflow-hidden"
+                >
+                  <div
+                    class="h-full bg-primary"
+                    style="
+                      width: 20%;
+                      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+                <div class="space-y-5">
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">KAPASITAS MESIN</span>
+                      <span class="text-primary">15%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div
+                        class="h-full bg-primary/70"
+                        style="width: 15%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">KONSUMSI BBM</span>
+                      <span class="text-primary">15%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div
+                        class="h-full bg-primary/70"
+                        style="width: 15%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">BAGASI</span>
+                      <span class="text-primary">10%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div
+                        class="h-full bg-primary/70"
+                        style="width: 10%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-5">
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">KEBUTUHAN TOURING</span>
+                      <span class="text-primary">10%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div
+                        class="h-full bg-primary/70"
+                        style="width: 10%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">TINGGI BADAN</span>
+                      <span class="text-primary">5%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div class="h-full bg-primary/70" style="width: 5%"></div>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="flex justify-between text-[10px] font-bold text-slate-400 uppercase"
+                    >
+                      <span class="">PENGGUNAAN HARIAN</span>
+                      <span class="text-primary">5%</span>
+                    </div>
+                    <div
+                      class="h-1.5 bg-slate-100 w-full rounded-full overflow-hidden"
+                    >
+                      <div class="h-full bg-primary/70" style="width: 5%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section 4: Rekomendasi Lainnya (List) Restyled -->
+          <section
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 animate-in fade-in slide-in-from-right-4 duration-700 delay-200 lg:col-span-4"
+          >
+            <h2
+              class="text-xl font-bold text-slate-800 mb-8 border-b border-slate-50 pb-4"
+            >
+              Rekomendasi Lainnya
+            </h2>
+            <div class="space-y-3">
+              <div
+                class="group flex items-center justify-between p-4 rounded-xl border border-slate-100 hover:border-primary hover:bg-blue-50/30 transition-all cursor-pointer"
+              >
+                <div class="flex items-center gap-4">
+                  <span
+                    class="text-sm font-bold text-slate-400 group-hover:text-primary"
+                    >#2</span
+                  >
+                  <div>
+                    <p
+                      class="font-bold text-slate-800 group-hover:text-primary"
+                    >
+                      Yamaha NMAX 155
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-bold text-slate-500">85%</span>
+                </div>
+              </div>
+              <div
+                class="group flex items-center justify-between p-4 rounded-xl border border-slate-100 hover:border-primary hover:bg-blue-50/30 transition-all cursor-pointer"
+              >
+                <div class="flex items-center gap-4">
+                  <span
+                    class="text-sm font-bold text-slate-400 group-hover:text-primary"
+                    >#3</span
+                  >
+                  <div>
+                    <p
+                      class="font-bold text-slate-800 group-hover:text-primary"
+                    >
+                      Honda PCX 160
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-bold text-slate-500">82%</span>
+                </div>
+              </div>
+              <div
+                class="group flex items-center justify-between p-4 rounded-xl border border-slate-100 hover:border-primary hover:bg-blue-50/30 transition-all cursor-pointer"
+              >
+                <div class="flex items-center gap-4">
+                  <span
+                    class="text-sm font-bold text-slate-400 group-hover:text-primary"
+                    >#4</span
+                  >
+                  <div>
+                    <p
+                      class="font-bold text-slate-800 group-hover:text-primary"
+                    >
+                      Yamaha Aerox 155
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-bold text-slate-500">78%</span>
+                </div>
+              </div>
+              <div
+                class="group flex items-center justify-between p-4 rounded-xl border border-slate-100 hover:border-primary hover:bg-blue-50/30 transition-all cursor-pointer"
+              >
+                <div class="flex items-center gap-4">
+                  <span
+                    class="text-sm font-bold text-slate-400 group-hover:text-primary"
+                    >#5</span
+                  >
+                  <div>
+                    <p
+                      class="font-bold text-slate-800 group-hover:text-primary"
+                    >
+                      Honda CBR150R
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-bold text-slate-500">75%</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav
+      class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white px-6 py-3 flex justify-between items-center border-t border-slate-100 shadow-lg"
+    >
+      <div class="flex flex-col items-center gap-0.5 text-primary">
+        <span class="material-symbols-outlined">dashboard</span>
+        <span class="text-[10px] font-bold">DASHBOARD</span>
+      </div>
+      <div class="flex flex-col items-center gap-0.5 text-slate-400">
+        <span class="material-symbols-outlined">settings_input_component</span>
+        <span class="text-[10px] font-bold">SPECS</span>
+      </div>
+      <div class="flex flex-col items-center gap-0.5 text-slate-400">
+        <span class="material-symbols-outlined">trending_up</span>
+        <span class="text-[10px] font-bold">TRENDS</span>
+      </div>
+      <div class="flex flex-col items-center gap-0.5 text-slate-400">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-[10px] font-bold">PROFILE</span>
+      </div>
+    </nav>
+    <!-- Floating Action Button -->
+
+    <script>
+      // Progress bar animation on load
+      document.addEventListener("DOMContentLoaded", () => {
+        const bars = document.querySelectorAll(".h-full.bg-primary");
+        bars.forEach((bar) => {
+          const finalWidth = bar.style.width;
+          bar.style.width = "0%";
+          setTimeout(() => {
+            bar.style.transition = "width 1.2s cubic-bezier(0.4, 0, 0.2, 1)";
+            bar.style.width = finalWidth;
+          }, 300);
+        });
+      });
+    </script>
+  </body>
+</html>
