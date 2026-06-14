@@ -1,0 +1,118 @@
+/* ===================================
+GLOBAL STYLE
+=================================== */
+
+body{
+    background-color:#f8fafc;
+    color:#1e293b;
+    font-family:"Inter",sans-serif;
+}
+
+/* ===================================
+CUSTOM SHADOW
+=================================== */
+
+.custom-shadow{
+    box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* ===================================
+HERO SECTION
+=================================== */
+
+.hero-gradient{
+    background:linear-gradient(
+        135deg,
+        #e6f0ff 0%,
+        #ffffff 50%,
+        #e6f0ff 100%
+    );
+}
+
+.motor-bg-glow{
+    background:radial-gradient(
+        circle,
+        rgba(224,236,255,1) 0%,
+        rgba(255,255,255,0) 70%
+    );
+}
+
+/* ===================================
+BUTTON & IMAGE EFFECT
+=================================== */
+
+.btn-primary{
+    transition:all .3s ease;
+}
+
+.btn-primary:hover{
+    transform:scale(1.05);
+}
+
+.motor-image{
+    transition:all .3s ease;
+}
+
+.motor-image:hover{
+    transform:scale(1.05);
+}
+
+/* ===================================
+FEATURE CARD
+=================================== */
+
+.feature-card{
+    transition:all .3s ease;
+}
+
+.feature-card:hover{
+    transform:translateY(-4px);
+}
+
+/* ===================================
+HASIL REKOMENDASI
+=================================== */
+
+.material-symbols-outlined{
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+.bg-brand-blue{
+    background-color:#0055cc;
+}
+
+.text-brand-blue{
+    color:#0055cc;
+}
+
+.bg-brand-blue-light{
+    background-color:#eef4ff;
+}
+
+.progress-bar-bg{
+    background-color:#e2e8f0;
+}
+
+.progress-bar-fill{
+    background-color:#0055cc;
+}
+
+/* ===================================
+DETAIL SPESIFIKASI MOTOR
+=================================== */
+
+.bg-gradient-header{
+    background:linear-gradient(
+        to right,
+        #0046ad,
+        #0056d2
+    );
+}
+
+.spec-table-row:nth-child(odd){
+    background-color:#f8fafc;
+}

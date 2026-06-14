@@ -1,280 +1,297 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rekomendasi Sepeda Motor</title>
-    <!-- Tailwind CSS v3 CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "brand-blue": "#0056D2",
-              "brand-blue-hover": "#0041A3",
-              "brand-bg-light": "#F0F7FF",
-            },
-          },
-        },
-      };
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "brand-blue": "#0056D2",
+                        "brand-blue-hover": "#0041A3",
+                        "brand-bg-light": "#F0F7FF"
+                    }
+                }
+            }
+        };
     </script>
-    <style data-purpose="custom-gradients">
-      /* Custom gradient for the hero background to match the subtle glow behind the motorcycle */
-      .hero-gradient {
-        background: linear-gradient(
-          135deg,
-          #e6f0ff 0%,
-          #ffffff 50%,
-          #e6f0ff 100%
-        );
-      }
-      .motor-bg-glow {
-        background: radial-gradient(
-          circle,
-          rgba(224, 236, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 70%
-        );
-      }
-    </style>
-  </head>
-  <body class="bg-gray-50 font-sans text-slate-800">
-    <!-- BEGIN: MainHeader -->
+</head>
+
+<body class="bg-gray-50 font-sans text-slate-800">
+
+    <!-- HEADER -->
     <header class="bg-brand-blue text-white shadow-md">
-      <div class="container mx-auto px-6 py-4 flex items-center">
-        <div class="flex items-center gap-3">
-          <!-- Motorcycle Icon Placeholder -->
-          <h1 class="text-xl font-bold tracking-tight">
-            Rekomendasi Sepeda Motor
-          </h1>
+        <div class="px-4 py-4 flex items-center">
+            <h1 class="text-xl font-bold tracking-tight">
+                Rekomendasi Sepeda Motor
+            </h1>
         </div>
-      </div>
     </header>
-    <!-- END: MainHeader -->
+
+    <!-- HERO SECTION -->
     <main>
-      <!-- BEGIN: HeroSection -->
-      <section
-        class="container mx-auto px-6 py-12"
-        data-purpose="hero-container"
-      >
-        <div
-          class="bg-brand-bg-light rounded-[2.5rem] overflow-hidden relative shadow-sm border border-blue-50/50"
-        >
-          <div
-            class="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-12 lg:py-20 gap-12"
-          >
-            <!-- Text Content -->
-            <div class="w-full lg:w-1/2 z-10">
-              <h2
-                class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6"
-              >
-                Temukan Sepeda Motor <br />
-                yang Paling Sesuai <br />
-                dengan <span class="text-brand-blue">Kebutuhan Anda</span>
-              </h2>
-              <p class="text-slate-600 text-lg mb-8 max-w-lg leading-relaxed">
-                Sistem rekomendasi cerdas menggunakan metode
-                <span class="font-semibold italic text-slate-700"
-                  >Weighted Content-Based Filtering</span
-                >
-                untuk memberikan rekomendasi motor terbaik beserta alasannya.
-              </p>
-              <a
-                href="Formulir_Preferensi.html"
-                class="bg-brand-blue hover:bg-brand-blue-hover text-white px-8 py-4 rounded-xl font-semibold inline-flex w-fit items-center gap-3 transition-all transform hover:scale-105 shadow-lg shadow-blue-200"
-              >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewbox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-                Mulai Rekomendasi
-              </a>
-            </div>
-            <!-- Image Content -->
-            <div
-              class="w-full lg:w-1/2 relative flex justify-center items-center"
-            >
-              <!-- Decorative circle behind motorcycle -->
-              <div
-                class="absolute w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-blue-100 rounded-full motor-bg-glow opacity-60"
-              ></div>
-              <!-- Enlarged Motorcycle Image -->
-              <img
-                alt="Honda PCX White Motorcycle"
-                class="relative z-10 w-full max-w-lg object-contain drop-shadow-2xl transform hover:scale-105 transition-all"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj1vzDxdvMJBA6G4UFhKNM33JRzlxETreAFDz6xR3kD7W7k7-TH6pAzxy9L3QnZS4KAk0vhA9bRfCRdS3iv6vpA3EOZBzMVkdtG12kJV7H_kqfvwPeZHT8xaJNkzvwoul39L8AzCvkKmfuIMepdhqL6eOJFOmCRiQO3F7yjGXsKh79ltc2zljcNCv7UDtZhjNj7eyEGJGMUH6cEM448D0y_tZxtmk1BGkwnWP2nOZ_mi5bv0WCZhDjNteeNT6U7QRH2WomeRkObf6d"
-                style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 25px 25px)"
-              />
-              <!-- Decorative Dots Pattern -->
-              <div class="absolute top-0 right-0 p-4 opacity-20">
-                <div class="grid grid-cols-4 gap-2">
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                  <div class="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+
+        <section class="container mx-auto px-6 py-12">
+
+            <div class="hero-box">
+
+                <div class="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-12 lg:py-20 gap-12">
+
+                    <!-- TEKS -->
+                    <div class="w-full lg:w-1/2 z-10">
+
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+
+                            Temukan Sepeda Motor Yang
+                            <br>
+                            Paling Sesuai
+                            <br>
+                            dengan
+                            <span class="text-brand-blue">
+                                Kebutuhan Anda
+                            </span>
+
+                        </h2>
+
+                        <p class="text-slate-600 text-lg mb-8 max-w-lg leading-relaxed">
+
+                            Sistem rekomendasi cerdas menggunakan metode
+
+                            <span class="font-semibold italic text-slate-700">
+                                Weighted Content-Based Filtering
+                            </span>
+
+                            untuk memberikan rekomendasi motor terbaik
+                            berdasarkan preferensi pengguna serta
+                            dilengkapi penjelasan alasan rekomendasi.
+
+                        </p>
+
+                        <a href="Formulir_Preferensi.html"
+                            class="bg-brand-blue hover:bg-brand-blue-hover text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 shadow-lg">
+
+                            <svg
+                                class="h-5 w-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z">
+                                </path>
+
+                            </svg>
+
+                            Mulai Rekomendasi
+
+                        </a>
+
+                    </div>
+
+                    <!-- GAMBAR -->
+                    <div class="w-full lg:w-1/2 relative flex justify-center items-center">
+
+                        <div class="bg-white p-8 rounded-3xl shadow-2xl border border-slate-200 hover:shadow-3xl transition duration-300"
+                        >
+
+                        <img
+                            src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1200&q=80"
+                            alt="Sepeda Motor"
+                            class="w-full max-w-lg object-contain"
+                            >
+
+                    </div>
+
                 </div>
-              </div>
+
             </div>
-          </div>
+
+        </section>
+
+<!-- FITUR -->
+<section class="container mx-auto px-6 py-0">
+
+    <h3 class="text-xl font-bold text-slate-800 mb-8">
+        Mengapa Menggunakan Sistem Ini?
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- FITUR 1 -->
+        <div class="feature-card">
+
+            <div class="feature-icon bg-blue-50 text-brand-blue">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 2v4m0 12v4m10-10h-4M6 12H2m15.07 7.07l-2.83-2.83M9.76 9.76L6.93 6.93m10.14 0l-2.83 2.83M9.76 14.24l-2.83 2.83"
+                    />
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="4"
+                        stroke-width="2"
+                    />
+                </svg>
+
+            </div>
+
+            <h4 class="font-bold text-slate-900">
+                Sesuai Kebutuhan
+            </h4>
+
+            <p class="text-sm text-slate-500">
+                Rekomendasi disesuaikan dengan preferensi dan kebutuhan pengguna.
+            </p>
+
         </div>
-      </section>
-      <!-- END: HeroSection -->
-      <!-- BEGIN: FeaturesSection -->
-      <section
-        class="container mx-auto px-6 py-12"
-        data-purpose="features-grid"
-      >
-        <h3 class="text-xl font-bold text-slate-800 mb-8">
-          Mengapa Menggunakan Sistem Ini?
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Feature 1: Sesuai Kebutuhan -->
-          <div
-            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4"
-          >
-            <div
-              class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-brand-blue"
-            >
-              <svg
-                class="h-8 w-8"
-                fill="none"
-                stroke="currentColor"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                ></path>
-              </svg>
+
+        <!-- FITUR 2 -->
+        <div class="feature-card">
+
+            <div class="feature-icon bg-green-50 text-green-600">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                </svg>
+
             </div>
-            <div>
-              <h4 class="font-bold text-slate-900 mb-2">Sesuai Kebutuhan</h4>
-              <p class="text-sm text-slate-500 leading-relaxed">
-                Rekomendasi disesuaikan dengan preferensi dan kebutuhan Anda.
-              </p>
-            </div>
-          </div>
-          <!-- Feature 2: Penjelasan Jelas -->
-          <div
-            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4"
-          >
-            <div
-              class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center text-green-600"
-            >
-              <svg
-                class="h-8 w-8"
-                fill="none"
-                stroke="currentColor"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 mb-2">Penjelasan Jelas</h4>
-              <p class="text-sm text-slate-500 leading-relaxed">
-                Setiap rekomendasi dilengkapi dengan alasan yang mudah dipahami.
-              </p>
-            </div>
-          </div>
-          <!-- Feature 3: Cepat & Akurat -->
-          <div
-            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4"
-          >
-            <div
-              class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center text-orange-500"
-            >
-              <svg
-                class="h-8 w-8"
-                fill="none"
-                stroke="currentColor"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.364-6.364l-.707-.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 mb-2">Cepat &amp; Akurat</h4>
-              <p class="text-sm text-slate-500 leading-relaxed">
-                Proses perhitungan cepat dengan hasil rekomendasi yang akurat.
-              </p>
-            </div>
-          </div>
-          <!-- Feature 4: Mudah Digunakan -->
-          <div
-            class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-4"
-          >
-            <div
-              class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-600"
-            >
-              <svg
-                class="h-8 w-8"
-                fill="none"
-                stroke="currentColor"
-                viewbox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                ></path>
-              </svg>
-            </div>
-            <div>
-              <h4 class="font-bold text-slate-900 mb-2">Mudah Digunakan</h4>
-              <p class="text-sm text-slate-500 leading-relaxed">
-                Antarmuka sederhana dan nyaman digunakan oleh semua pengguna.
-              </p>
-            </div>
-          </div>
+
+            <h4 class="font-bold text-slate-900">
+                Penjelasan Jelas
+            </h4>
+
+            <p class="text-sm text-slate-500">
+                Setiap rekomendasi memiliki alasan yang mudah dipahami.
+            </p>
+
         </div>
-      </section>
-      <!-- END: FeaturesSection -->
-    </main>
-    <!-- BEGIN: Footer -->
+
+        <!-- FITUR 3 -->
+        <div class="feature-card">
+
+            <div class="feature-icon bg-orange-50 text-orange-500">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3a6 6 0 00-3.6 10.8c.4.3.6.8.6 1.3V16a1 1 0 001 1h4a1 1 0 001-1v-.9c0-.5.2-1 .6-1.3A6 6 0 0012 3z"
+                    />
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 21h4"
+                    />
+                </svg>
+
+            </div>
+
+            <h4 class="font-bold text-slate-900">
+                Cepat & Akurat
+            </h4>
+
+            <p class="text-sm text-slate-500">
+                Perhitungan similarity dan ranking dilakukan secara otomatis.
+            </p>
+
+        </div>
+
+        <!-- FITUR 4 -->
+        <div class="feature-card">
+
+            <div class="feature-icon bg-purple-50 text-purple-600">
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4"
+                    />
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"
+                    />
+                </svg>
+
+            </div>
+
+            <h4 class="font-bold text-slate-900">
+                Mudah Digunakan
+            </h4>
+
+            <p class="text-sm text-slate-500">
+                Antarmuka sederhana sehingga mudah digunakan semua pengguna.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- FOOTER -->
     <footer class="bg-gray-100 py-8 mt-12 border-t border-gray-200">
-      <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
-        <p class="">
-          © 2024 Recommender System Sepeda Motor. Semua hak dilindungi.
-        </p>
-      </div>
+
+        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+
+            <p>
+                © 2026 Rekomendasi Sepeda Motor. Hak Cipta.
+            </p>
+
+        </div>
+
     </footer>
-    <!-- END: Footer -->
-  </body>
+
+</body>
 </html>

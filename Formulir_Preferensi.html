@@ -1,582 +1,700 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Rekomendasi Sepeda Motor - Profil Pengguna</title>
-    <!-- Tailwind CSS v3 CDN with plugins -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style data-purpose="custom-styling">
-      body {
-        background-color: #f8fafc;
-      }
-      .custom-shadow {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      }
-    </style>
-  </head>
-  <body class="font-sans text-slate-700">
-    <!-- BEGIN: MainHeader -->
-    <header class="bg-blue-700 text-white p-4 shadow-md sticky top-0 z-50">
-      <div class="max-w-6xl mx-auto flex items-center gap-3">
-        <!-- Motor Icon Placeholder -->
+<head>
+  <meta charset="utf-8">
 
-        <h1 class="text-lg font-bold">Rekomendasi Sepeda Motor</h1>
-      </div>
-    </header>
-    <!-- END: MainHeader -->
-    <!-- BEGIN: MainContent -->
-    <main class="max-w-6xl mx-auto p-6 md:p-10">
-      <!-- Title Section -->
-      <div class="mb-8" data-purpose="page-title">
-        <h2 class="text-3xl font-bold text-slate-800 mb-2">Profil Pengguna</h2>
-        <p class="text-slate-500">
-          Silakan isi
-          <span class="text-blue-600 underline cursor-pointer"
-            >preferensi Anda</span
-          >
-          untuk mendapatkan rekomendasi sepeda motor yang paling sesuai.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- BEGIN: PreferenceForm -->
-        <section
-          class="lg:col-span-8 bg-white p-6 md:p-8 rounded-xl custom-shadow border border-slate-100"
-          data-purpose="form-container"
-        >
-          <h3 class="text-blue-700 font-bold text-xl mb-8">
-            Form Preferensi Pengguna
-          </h3>
-          <form action="Hasil_rekomendasi.html" class="space-y-6" method="GET">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-              <!-- Field 1: Budget Maksimal -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  1. Budget Maksimal
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <div class="flex">
-                  <span
-                    class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-slate-300 bg-slate-50 text-slate-500 text-sm font-medium"
-                    >Rp</span
-                  >
-                  <input
-                    class="flex-1 block w-full rounded-none rounded-r-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                    type="text"
-                    value="30.000.000"
-                  />
-                </div>
-                <p class="text-xs text-slate-400">
-                  Masukkan budget maksimal yang tersedia
-                </p>
-              </div>
-              <!-- Field 2: Jenis Motor -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  2. Jenis Motor yang Diinginkan
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">Matic</option>
-                  <option>Manual / Bebek</option>
-                  <option>Sport</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Pilih jenis motor yang Anda inginkan
-                </p>
-              </div>
-              <!-- Field 3: Kapasitas Mesin -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  3. Kapasitas Mesin (CC)
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">110 - 150 CC</option>
-                  <option>110 CC</option>
-                  <option>155 - 530 CC</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Pilih rentang kapasitas mesin
-                </p>
-              </div>
-              <!-- Field 4: Prioritas Konsumsi BBM -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  4. Prioritas Konsumsi BBM
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">46.9 - 60 km/L</option>
-                  <option>32 - 46.9 km/L</option>
-                  <option>18 - 32 km/L</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Seberapa penting konsumsi BBM bagi Anda
-                </p>
-              </div>
-              <!-- Field 5: Kapasitas Bagasi -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  5. Kebutuhan Kapasitas Bagasi
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">Besar ( &gt; 30 - 48 Liter )</option>
-                  <option>Sedang ( 15 - 30 Liter )</option>
-                  <option>Kecil ( &lt; 15 Liter )</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Pilih kebutuhan kapasitas bagasi
-                </p>
-              </div>
-              <!-- Field 6: Tinggi Badan -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  6. Tinggi Badan Anda
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <div class="flex">
-                  <input
-                    class="flex-1 block w-full rounded-none rounded-l-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                    type="text"
-                    value="200"
-                  />
-                  <span
-                    class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-slate-300 bg-slate-50 text-slate-500 text-sm"
-                    >cm</span
-                  >
-                </div>
-                <p class="text-xs text-slate-400">
-                  Digunakan untuk menyesuaikan tinggi jok
-                </p>
-              </div>
-              <!-- Field 7: Penggunaan Harian -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  7. Penggunaan Harian
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">Ya</option>
-                  <option>Tidak</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Apakah motor akan digunakan untuk kebutuhan harian?
-                </p>
-              </div>
-              <!-- Field 8: Touring -->
-              <div class="space-y-2">
-                <label class="block text-sm font-semibold text-slate-700">
-                  8. Kebutuhan Touring / Perjalanan Jauh
-                  <span class="inline-block ml-1 text-slate-400">
-                    <svg
-                      class="h-4 w-4 inline"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                      ></path>
-                    </svg>
-                  </span>
-                </label>
-                <select
-                  class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
-                >
-                  <option selected="">Ya</option>
-                  <option>Tidak</option>
-                </select>
-                <p class="text-xs text-slate-400">
-                  Apakah Anda sering melakukan perjalanan jauh / touring?
-                </p>
-              </div>
-            </div>
-            <!-- Info Box -->
-            <div
-              class="bg-blue-50 border border-blue-100 rounded-lg p-4 flex gap-3 mt-8"
-            >
-              <svg
-                class="h-6 w-6 text-blue-500 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                ></path>
-              </svg>
-              <div>
-                <p class="text-blue-800 font-bold text-sm">Informasi</p>
-                <p class="text-blue-700 text-sm">
-                  Semakin lengkap preferensi yang Anda isi, semakin akurat
-                  rekomendasi yang kami berikan.
-                </p>
-              </div>
-            </div>
-            <!-- Form Buttons -->
-            <div class="flex flex-wrap gap-4 pt-4">
-              <button
-                class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2.5 rounded-md font-bold flex items-center gap-2 transition-colors"
-                type="submit"
-              >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-                Dapatkan Rekomendasi
-              </button>
-              <button
-                class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-6 py-2.5 rounded-md font-bold flex items-center gap-2 transition-colors"
-                type="reset"
-              >
-                <svg
-                  class="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  ></path>
-                </svg>
-                Reset Form
-              </button>
-            </div>
-          </form>
-        </section>
-        <!-- END: PreferenceForm -->
-        <!-- BEGIN: Sidebar -->
-        <aside class="lg:col-span-4 space-y-6" data-purpose="sidebar">
-          <!-- Sidebar Block 1: Why data is needed -->
-          <div
-            class="bg-green-50 border border-green-100 p-6 rounded-xl shadow-sm"
-          >
-            <div class="flex items-center gap-2 text-green-700 font-bold mb-4">
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.663 17h4.674a1 1 0 00.922-.617l2.108-4.742A1 1 0 0016.446 10H13V4a1 1 0 00-1-1h-1a1 1 0 00-1 1v6H7.554a1 1 0 00-.922 1.641l2.108 4.742a1 1 0 00.922.617z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                ></path>
-              </svg>
-              <span class="">Mengapa data ini diperlukan?</span>
-            </div>
-            <p class="text-sm text-green-800 leading-relaxed mb-4">
-              Data preferensi Anda akan digunakan untuk mencocokkan kebutuhan
-              dengan spesifikasi motor menggunakan metode
-              <span class="font-bold">Weighted Content-Based Filtering</span>.
-            </p>
-            <p class="text-sm font-bold text-green-800 mb-4">
-              Kriteria yang digunakan:
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Budget
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Jenis Motor
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Kapasitas Mesin
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Konsumsi BBM
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Kapasitas Bagasi
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Tinggi Badan
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Penggunaan Harian
-              </li>
-              <li class="flex items-center gap-2 text-sm text-green-800">
-                <svg
-                  class="h-5 w-5 text-green-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Kebutuhan Touring
-              </li>
-            </ul>
-          </div>
-          <!-- Sidebar Block 2: Privacy -->
-          <div
-            class="bg-purple-50 border border-purple-100 p-6 rounded-xl shadow-sm"
-          >
-            <div class="flex items-center gap-2 text-purple-700 font-bold mb-4">
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                ></path>
-              </svg>
-              <span class="">Privasi Terjamin</span>
-            </div>
-            <p class="text-sm text-purple-800 leading-relaxed">
-              Data yang Anda masukkan hanya digunakan untuk rekomendasi dan
-              tidak akan dibagikan kepada pihak lain.
-            </p>
-          </div>
-        </aside>
-        <!-- END: Sidebar -->
-      </div>
-    </main>
-    <!-- END: MainContent -->
-    <!-- BEGIN: Footer -->
-    <footer
-      class="mt-12 py-6 border-t border-slate-200 text-center text-slate-500 text-xs"
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Rekomendasi Sepeda Motor - Profil Pengguna</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- CSS Eksternal -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body class="font-sans text-slate-700">
+
+  <!-- HEADER -->
+  <header
+    class="bg-blue-700 text-white p-4 shadow-md sticky top-0 z-50"
+  >
+    <div
+      class="flex items-center gap-3"
     >
-      <div class="max-w-6xl mx-auto">
-        © 2024 Recommender System Sepeda Motor. All rights reserved.
-      </div>
-    </footer>
-    <!-- END: Footer -->
-  </body>
+      <h1 class="text-lg font-bold">
+        Rekomendasi Sepeda Motor
+      </h1>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto p-6 md:p-10">
+
+    <!-- TITLE -->
+    <div
+      class="mb-8"
+      data-purpose="page-title"
+    >
+      <h2
+        class="text-3xl font-bold text-slate-800 mb-2"
+      >
+        Profil Pengguna
+      </h2>
+
+      <p class="text-slate-500">
+        Silakan isi
+        <span
+          class="text-blue-600 underline cursor-pointer"
+        >
+        preferensi Anda
+        </span>
+        untuk mendapatkan rekomendasi sepeda motor yang paling sesuai.
+      </p>
+    </div>
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+    >
+
+      <!-- FORM -->
+      <section
+        class="lg:col-span-8 bg-white p-6 md:p-8 rounded-xl custom-shadow border border-slate-100"
+        data-purpose="form-container"
+      >
+
+        <h3
+          class="text-blue-700 font-bold text-xl mb-8"
+        >
+          Form Preferensi Pengguna
+        </h3>
+
+        <form
+          id="preferenceForm"
+          class="space-y-6"
+        >
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6"
+          >
+
+<!-- Field 1: Budget Maksimal -->
+<div class="space-y-2">
+  <label class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+    1. Budget Maksimal
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <div class="flex">
+    <span
+      class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-slate-300 bg-slate-50 text-slate-500 text-sm font-medium"
+    >
+      Rp
+    </span>
+
+    <input
+      id="budget"
+      name="budget"
+      type="number"
+      min="1000000"
+      step="100000"
+      value="30000000"
+      required
+      class="flex-1 block w-full rounded-none rounded-r-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+    />
+  </div>
+
+  <p class="text-xs text-slate-400">
+    Masukkan budget maksimal yang tersedia
+  </p>
+</div>
+
+<!-- Field 2: Jenis Motor -->
+<div class="space-y-2">
+  <label class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+    2. Jenis Motor yang Diinginkan
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <select
+    id="jenis_motor"
+    name="jenis_motor"
+    required
+    class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="Matic" selected>Matic</option>
+    <option value="Bebek">Bebek</option>
+    <option value="Sport">Sport</option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Pilih jenis motor yang Anda inginkan
+  </p>
+</div>
+
+<!-- Field 3: Kapasitas Mesin -->
+<div class="space-y-2">
+  <label class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+    3. Kapasitas Mesin (CC)
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <select
+    id="cc"
+    name="cc"
+    required
+    class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="110-150">
+      110 - 150 CC
+    </option>
+
+    <option value="150-160" selected>
+      150 - 160 CC
+    </option>
+
+    <option value="160-250">
+      160 - 250 CC
+    </option>
+
+    <option value="250+">
+      > 250 CC
+    </option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Pilih rentang kapasitas mesin
+  </p>
+</div>
+
+<!-- Field 4: Prioritas Konsumsi BBM -->
+<div class="space-y-2">
+  <label class="flex items-center gap-2 text-sm font-semibold text-slate-700">
+    4. Prioritas Konsumsi BBM
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <select
+    id="bbm"
+    name="bbm"
+    required
+    class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="tinggi" selected>
+      Tinggi
+    </option>
+
+    <option value="sedang">
+      Sedang
+    </option>
+
+    <option value="rendah">
+      Rendah
+    </option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Seberapa penting konsumsi BBM bagi Anda
+  </p>
+</div>
+
+<!-- Field 5: Kapasitas Bagasi -->
+<div class="space-y-2">
+  <label
+    for="bagasi"
+    class="flex items-center gap-2 text-sm font-semibold text-slate-700"
+  >
+    5. Kebutuhan Kapasitas Bagasi
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <select
+    id="bagasi"
+    name="bagasi"
+    required
+    class="block w-full rounded-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="besar" selected>
+      Besar (> 18 Liter)
+    </option>
+
+    <option value="sedang">
+      Sedang (10 - 18 Liter)
+    </option>
+
+    <option value="kecil">
+      Kecil (< 10 Liter)
+    </option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Pilih kebutuhan kapasitas bagasi
+  </p>
+</div>
+
+<!-- Field 6: Tinggi Badan -->
+<div class="space-y-2">
+  <label
+    for="tinggi_badan"
+    class="flex items-center gap-2 text-sm font-semibold text-slate-700"
+  >
+    6. Tinggi Badan Anda
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 text-slate-400"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"
+      />
+    </svg>
+  </label>
+
+  <div class="flex">
+    <input
+      id="tinggi_badan"
+      name="tinggi_badan"
+      type="number"
+      min="130"
+      max="220"
+      value="170"
+      required
+      class="flex-1 block w-full rounded-none rounded-l-md border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+    />
+
+    <span
+      class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-slate-300 bg-slate-50 text-slate-500 text-sm"
+    >
+      cm
+    </span>
+  </div>
+
+  <p class="text-xs text-slate-400">
+    Digunakan untuk menyesuaikan tinggi jok motor
+  </p>
+</div>
+
+<!-- Field 7: Penggunaan Harian -->
+<div class="space-y-2">
+  <label
+    for="harian"
+    class="block text-sm font-semibold text-slate-700"
+  >
+    7. Penggunaan Harian
+  </label>
+
+  <select
+    id="harian"
+    name="harian"
+    required
+    class="block w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="1" selected>
+      Ya
+    </option>
+
+    <option value="0">
+      Tidak
+    </option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Apakah motor akan digunakan untuk kebutuhan harian?
+  </p>
+</div>
+
+<!-- Field 8: Touring -->
+<div class="space-y-2">
+  <label
+    for="touring"
+    class="block text-sm font-semibold text-slate-700"
+  >
+    8. Kebutuhan Touring / Perjalanan Jauh
+  </label>
+
+  <select
+    id="touring"
+    name="touring"
+    required
+    class="block w-full rounded-lg border-slate-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+  >
+    <option value="1" selected>
+      Ya
+    </option>
+
+    <option value="0">
+      Tidak
+    </option>
+  </select>
+
+  <p class="text-xs text-slate-400">
+    Apakah Anda sering melakukan perjalanan jauh / touring?
+  </p>
+</div>
+
+<!-- PENUTUP GRID FORM -->
+</div>
+
+<!-- Info Box -->
+<div
+  class="bg-blue-50 border border-blue-200 rounded-xl p-5 flex gap-3 mt-8"
+>
+  <svg
+    class="h-6 w-6 text-blue-500 flex-shrink-0"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    ></path>
+  </svg>
+
+  <div>
+    <p class="text-blue-800 font-bold text-sm">
+      Informasi
+    </p>
+
+    <p class="text-blue-700 text-sm leading-relaxed">
+      Semakin lengkap preferensi yang Anda isi,
+      semakin akurat rekomendasi sepeda motor yang dihasilkan
+      oleh sistem Weighted Content-Based Filtering.
+    </p>
+  </div>
+</div>
+
+<!-- Form Buttons -->
+<div class="flex flex-wrap gap-4 pt-6">
+
+  <button
+    id="btnRekomendasi"
+    type="submit"
+    class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-3 rounded-lg shadow-md hover:shadow-lg font-bold flex items-center gap-2 transition-all duration-300"
+  >
+    <svg
+      class="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      ></path>
+    </svg>
+
+    Dapatkan Rekomendasi
+  </button>
+
+  <button
+    type="reset"
+    class="bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-4 py-3 rounded-lg shadow-sm hover:shadow font-bold flex items-center gap-2 transition-all duration-300"
+  >
+    <svg
+      class="h-5 w-5"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      ></path>
+    </svg>
+
+    Reset Form
+  </button>
+
+  <a
+  href="Beranda.html"
+  class="bg-slate-700 hover:bg-slate-800 text-white px-4 py-3 rounded-lg shadow-md hover:shadow-lg font-bold flex items-center gap-2 transition-all duration-300"
+>
+  <svg
+    class="h-5 w-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 19l-7-7 7-7"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    ></path>
+  </svg>
+
+  Kembali ke Beranda
+</a>
+
+</div>
+<!-- END: PreferenceForm -->
+</form>
+
+</section>
+<!-- BEGIN: Sidebar -->
+<aside class="lg:col-span-4 space-y-6" data-purpose="sidebar">
+
+  <!-- Sidebar Block 1 -->
+  <div
+    class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm"
+  >
+    <div class="flex items-center gap-3 text-slate-800 font-bold mb-5">
+      <svg
+        class="h-6 w-6 text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.663 17h4.674a1 1 0 00.922-.617l2.108-4.742A1 1 0 0016.446 10H13V4a1 1 0 00-1-1h-1a1 1 0 00-1 1v6H7.554a1 1 0 00-.922 1.641l2.108 4.742a1 1 0 00.922.617z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></path>
+      </svg>
+
+      <span>Mengapa Data Ini Diperlukan?</span>
+    </div>
+
+    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+      Data preferensi Anda akan digunakan untuk mencocokkan kebutuhan dengan
+      spesifikasi motor menggunakan metode
+      <span class="font-bold">Weighted Content-Based Filtering</span>.
+    </p>
+
+    <p class="text-sm font-bold text-slate-800 mb-4">
+      Kriteria yang digunakan:
+    </p>
+
+    <ul class="space-y-3">
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Budget
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Jenis Motor
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Kapasitas Mesin
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Konsumsi BBM
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Kapasitas Bagasi
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Tinggi Badan
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Penggunaan Harian
+      </li>
+
+      <li class="flex items-center gap-2 text-sm text-slate-600">
+        <svg class="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+            clip-rule="evenodd">
+          </path>
+        </svg>
+        Kebutuhan Touring
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- Sidebar Block 2 -->
+  <div
+    class="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm"
+  >
+    <div class="flex items-center gap-3 text-slate-800 font-bold mb-4">
+      <svg
+        class="h-6 w-6 text-blue-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        ></path>
+      </svg>
+
+      <span>Privasi Terjamin</span>
+    </div>
+
+    <p class="text-sm text-slate-600 leading-relaxed">
+      Data yang Anda masukkan hanya digunakan untuk proses rekomendasi dan
+      tidak akan dibagikan kepada pihak lain.
+    </p>
+  </div>
+
+</aside>
+
+<!-- END: Sidebar -->
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer
+  class="mt-12 py-6 border-t border-slate-200 text-center text-slate-500 text-xs"
+>
+  <div class="max-w-6xl mx-auto">
+    © 2026 Recommender System Sepeda Motor. Hak Cipta.
+  </div>
+</footer>
+
+<script src="weights.js"></script>
+<script src="similarity.js"></script>
+<script src="ranking.js"></script>
+<script src="explanation.js"></script>
+<script src="recommendation.js"></script>
+<script src="form.js"></script>
+
+</body>
 </html>
